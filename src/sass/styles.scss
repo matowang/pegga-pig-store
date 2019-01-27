@@ -1,0 +1,11 @@
+@import 'themes.scss';
+@import 'variables.scss';
+
+body {
+    
+}
+main {
+    background: url('../images/background.png') center/cover no-repeat;
+    height: 100vh;
+    padding: 2rem;
+}

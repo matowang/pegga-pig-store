@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Pegga Pig Toy Store`,
+    title: `Peppa Pig Toy Store`,
     description: `Get your latest Pegga Pig Toys Here! Year of the pig. Chinese new year sale!`,
     author: `@Mato_wang`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
