@@ -1,0 +1,53 @@
+[
+    {
+        "id": "PE06369",
+        "title": "Pick Up and Play Playground Playset",
+        "price": {
+            "hkd": 199.9,
+            "twd": 799
+        },
+        "dimensions": {
+            "l": 34.0,
+            "w": 5.0,
+            "h": 27.0,
+            "unit": "cm"
+        },
+        "imgs": [
+            ""
+        ]
+    },
+    {
+        "id": "PE06952",
+        "title": "Shopping Trip Playset",
+        "price": {
+            "hkd": 199.9,
+            "twd": 799
+        },
+        "dimensions": {
+            "l": 20.0,
+            "w": 13.0,
+            "h": 12.5,
+            "unit": "cm"
+        },
+        "imgs": [
+            ""
+        ]
+    },
+    {
+        "id": "PE06595",
+        "title": "22 Inch Talking Peppa Plush",
+        "price": {
+            "hkd": 329.9,
+            "twd": 1299
+        },
+        "dimensions": {
+            "l": 30.0,
+            "w": 23.0,
+            "h": 55.0,
+            "unit": "cm"
+        },
+        "imgs": [
+            ""
+        ]
+    }
+]
