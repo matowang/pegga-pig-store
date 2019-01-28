@@ -1,32 +1,9 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
 
 const ProductCard = ({ id, title, price, imgUrl, width, length, height }) => {
     return (
         <div className="product-card">
-
-            <StaticQuery query={graphql`
-                query {
-                    allFile(filter: { relativePath: { regex: "/products//" } }) {
-                        edges {
-                          node {
-                            publicURL
-                            relativePath
-                          } 
-                        }
-                      }
-                }
-            `}
-                render={data =>
-                    <img
-                        src={data.allFile.edges.filter(
-                            ({ node }) => {
-                                return node.relativePath === imgUrl
-                            })[0].node.publicURL
-                        }
-                        alt={title}
-                    />}
-            />
+            <img src={imgUrl} alt={title} />
             <h2>{title}</h2>
             <div className="product-card-price">{price}</div>
             <button

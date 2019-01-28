@@ -6,7 +6,9 @@ import SEO from '../components/seo'
 import ProductCard from '../components/product-card'
 
 class IndexPage extends React.Component {
+
   render() {
+    console.log(this.props.data.allFile);
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -18,7 +20,7 @@ class IndexPage extends React.Component {
               id={id}
               title={title}
               price={price.hkd}
-              imgUrl={imgs[0]}
+              imgUrl={this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]).node.publicURL}
               width={dimensions.w}
               length={dimensions.l}
               height={dimensions.h}
@@ -52,6 +54,14 @@ query {
         }
       }
     }
+  }
+  allFile(filter: { relativePath: { regex: "images/products//" } extension: {regex: "/png|jpg/"}}) {
+      edges {
+        node {
+          publicURL
+          relativePath
+        } 
+      }
   }
 }
 `
