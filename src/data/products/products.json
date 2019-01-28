@@ -7,13 +7,13 @@
             "twd": 799
         },
         "dimensions": {
-            "l": 34.0,
-            "w": 5.0,
+            "w": 34.0,
+            "l": 5.0,
             "h": 27.0,
             "unit": "cm"
         },
         "imgs": [
-            ""
+            "images/products/pick-up-and-playground-playset1.png"
         ]
     },
     {
@@ -24,13 +24,13 @@
             "twd": 799
         },
         "dimensions": {
-            "l": 20.0,
-            "w": 13.0,
+            "w": 20.0,
+            "l": 13.0,
             "h": 12.5,
             "unit": "cm"
         },
         "imgs": [
-            ""
+            "images/products/shopping-trip-playset1.png"
         ]
     },
     {
@@ -41,13 +41,13 @@
             "twd": 1299
         },
         "dimensions": {
-            "l": 30.0,
-            "w": 23.0,
+            "w": 30.0,
+            "l": 23.0,
             "h": 55.0,
             "unit": "cm"
         },
         "imgs": [
-            ""
+            "images/products/22-inch-talking-peppa-plush1.png"
         ]
     }
 ]
