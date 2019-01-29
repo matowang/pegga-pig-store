@@ -10,7 +10,7 @@ const ProductCard = ({ id, title, price, imgUrl, width, length, height }) => {
                 className="snipcart-add-item"
                 data-item-id={id}
                 data-item-name={title}
-                data-item-price={JSON.stringify(price).replace(/"/g, "&quot;")}
+                data-item-price={JSON.stringify(price)}
                 data-item-url="https://angry-meitner-03adf1.netlify.com/"
                 data-item-image={`https://angry-meitner-03adf1.netlify.com${imgUrl}`}
                 data-item-width={width}

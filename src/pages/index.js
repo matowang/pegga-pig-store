@@ -36,24 +36,6 @@ export default IndexPage
 
 export const query = graphql`
 query {
-  allProductsJson {
-    edges {
-      node {
-        id
-        title
-        price {
-          hkd
-          twd
-        }
-        imgs
-        dimensions {
-          w
-          l
-          h
-        }
-      }
-    }
-  }
   allFile(filter: { relativePath: { regex: "/images/products//" } extension: {regex: "/png|jpg/"}}) {
       edges {
         node {
