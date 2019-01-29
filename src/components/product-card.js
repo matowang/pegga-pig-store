@@ -5,12 +5,12 @@ const ProductCard = ({ id, title, price, imgUrl, width, length, height }) => {
         <div className="product-card">
             <img src={imgUrl} alt={title} />
             <h2>{title}</h2>
-            <div className="product-card-price">{price}</div>
+            <div className="product-card-price">{price.hkd}</div>
             <button
                 className="snipcart-add-item"
                 data-item-id={id}
                 data-item-name={title}
-                data-item-price={price}
+                data-item-price={JSON.stringify(price).replace(/"/g, '\\"')}
                 data-item-url="https://angry-meitner-03adf1.netlify.com/"
                 data-item-image={`https://angry-meitner-03adf1.netlify.com${imgUrl}`}
                 data-item-width={width}

@@ -18,7 +18,7 @@ class IndexPage extends React.Component {
             <ProductCard
               id={id}
               title={title}
-              price={JSON.stringify(price)}
+              price={price}
               imgUrl={this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]).node.publicURL}
               width={dimensions.w}
               length={dimensions.l}
