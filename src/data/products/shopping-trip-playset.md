@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/shopping-trip-playset1.png'
+    
 ---
