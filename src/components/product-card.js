@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ProductCard = ({ id, title, price, imgUrl, width, length, height }) => {
+const ProductCard = ({ id, title, price, currency, imgUrl, width, length, height }) => {
     return (
         <div className="product-card">
             <img src={imgUrl} alt={title} />
             <h2>{title}</h2>
-            <div className="product-card-price">{price.hkd}</div>
+            <div className="product-card-price">{`${currency} ${price}`}</div>
             <button
                 className="snipcart-add-item"
                 data-item-id={id}

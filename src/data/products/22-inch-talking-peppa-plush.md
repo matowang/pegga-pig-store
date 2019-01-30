@@ -10,6 +10,6 @@ dimensions:
     h: 55
     unit: cm
 imgs: 
-    - 'images/products/22-inch-talking-peppa-plush1.png'
+    - 'images/products/22-inch-talking-peppa-plush.png'
 
 ---

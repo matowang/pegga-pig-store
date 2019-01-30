@@ -6,20 +6,42 @@ import SEO from '../components/seo'
 import ProductCard from '../components/product-card'
 
 class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currency: 'hkd'
+    }
+  }
+  setCurrency = (currency) => {
+
+    this.setState({ currency });
+    window.Snipcart.setCurrency(currency);
+  }
   render() {
-    console.log(this.props.data.allFile);
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <h1>Hi Peggas</h1>
+        <p>Currency: {this.state.currency}</p>
+        <select onChange={e => this.setCurrency(e.target.value)}>
+          <option value="hkd">HKD</option>
+          <option value="twd">TWD</option>
+        </select>
         {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
           const { id, title, price, dimensions, imgs } = node.frontmatter;
+          const imageEdge = this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]);
+          let imgUrl = '';
+          if (imageEdge)
+            imgUrl = imageEdge.node.publicURL;
+          else
+            console.log(imgs[0])
           return (
             <ProductCard
               id={id}
               title={title}
-              price={price}
-              imgUrl={this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]).node.publicURL}
+              price={price[this.state.currency]}
+              currency={this.state.currency}
+              imgUrl={imgUrl}
               width={dimensions.w}
               length={dimensions.l}
               height={dimensions.h}
