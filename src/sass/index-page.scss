@@ -1,0 +1,13 @@
+@import 'products.scss';
+
+#index-page {
+    padding: 2rem;
+    background: #daf8ff;
+    #landing {
+        margin: 2rem;
+        img {
+            border-radius: 3rem;
+            border: solid 0.5rem white;
+        }
+    }
+}

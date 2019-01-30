@@ -13,6 +13,7 @@ export default class HTML extends React.Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           {this.props.headComponents}
+          <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nunito" rel="stylesheet"></link>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
           <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="ZGJmODRlZmUtMzMwNi00ZTA4LWJmNTgtYWI5NTIzOWNhMDgyNjM2ODQwNzI5NTExNjYzNjI2" id="snipcart"></script>

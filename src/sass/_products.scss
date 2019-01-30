@@ -1,0 +1,33 @@
+@import 'variables.scss';
+#products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    border: 0.2em dashed $base-c1-light;
+    padding: 1em;
+    background: white;
+    outline: solid 0.3em white;
+    .product-card_image {
+        object-fit: contain;
+        height: 200px;
+        width: 100%;
+        margin-bottom: auto;
+    }
+    h2 {
+        color: black;
+        margin: 0.5em 0;
+    }
+    .product-card_price {
+        text-transform: uppercase;
+        margin: 1em 0;
+        color: $base-c2;
+    }
+}

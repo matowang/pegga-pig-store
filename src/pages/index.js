@@ -5,6 +5,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ProductCard from '../components/product-card'
 
+import '../sass/index-page.scss';
+
+import landingImg from '../images/family-play-mud.jpg'
+
 class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -20,35 +24,41 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <h1>Hi Peggas</h1>
-        <p>Currency: {this.state.currency}</p>
-        <select onChange={e => this.setCurrency(e.target.value)}>
-          <option value="hkd">HKD</option>
-          <option value="twd">TWD</option>
-        </select>
-        {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
-          const { id, title, price, dimensions, imgs } = node.frontmatter;
-          const imageEdge = this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]);
-          let imgUrl = '';
-          if (imageEdge)
-            imgUrl = imageEdge.node.publicURL;
-          else
-            console.log(imgs[0])
-          return (
-            <ProductCard
-              id={id}
-              title={title}
-              price={price[this.state.currency]}
-              currency={this.state.currency}
-              imgUrl={imgUrl}
-              width={dimensions.w}
-              length={dimensions.l}
-              height={dimensions.h}
-              key={id}
-            />
-          )
-        })}
+        <div id="index-page" className="">
+          <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year']} />
+          <p>Currency: {this.state.currency}</p>
+          <select onChange={e => this.setCurrency(e.target.value)}>
+            <option value="hkd">HKD</option>
+            <option value="twd">TWD</option>
+          </select>
+          <div id="landing">
+            <img alt="Peppa Pig Family playing with mud" src={landingImg}></img>
+          </div>
+          <section id="products-grid">
+            {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
+              const { id, title, price, dimensions, imgs } = node.frontmatter;
+              const imageEdge = this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]);
+              let imgUrl = '';
+              if (imageEdge)
+                imgUrl = imageEdge.node.publicURL;
+              else
+                console.log(`Could not find image at ${imgs[0]}`)
+              return (
+                <ProductCard
+                  id={id}
+                  title={title}
+                  price={price[this.state.currency]}
+                  currency={this.state.currency}
+                  imgUrl={imgUrl}
+                  width={dimensions.w}
+                  length={dimensions.l}
+                  height={dimensions.h}
+                  key={id}
+                />
+              )
+            })}
+          </section>
+        </div>
       </Layout>
     )
   }
@@ -66,7 +76,15 @@ query {
         } 
       }
   }
-  allMarkdownRemark(filter: { fileAbsolutePath: {regex: "/data/products/.+md$/"}}) {
+  allMarkdownRemark(
+    filter: { 
+      fileAbsolutePath: {regex: "/data/products/.+md$/"}
+    }
+    sort : {
+      fields: [frontmatter___id]
+      order: ASC
+    }
+  ) {
     edges {
       node {
         fileAbsolutePath

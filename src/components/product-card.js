@@ -3,11 +3,12 @@ import React from 'react';
 const ProductCard = ({ id, title, price, currency, imgUrl, width, length, height }) => {
     return (
         <div className="product-card">
-            <img src={imgUrl} alt={title} />
-            <h2>{title}</h2>
-            <div className="product-card-price">{`${currency} ${price}`}</div>
+            <img className="product-card_image" src={imgUrl} alt={title} />
+            <h2 className="product-card_name">{title}</h2>
+            <div className="product-card_price">{`${currency}${price}`}</div>
             <button
-                className="snipcart-add-item"
+                className="snipcart-add-item buy-button"
+                onClick={() => console.log(`added item ${title}`)}
                 data-item-id={id}
                 data-item-name={title}
                 data-item-price={JSON.stringify(price)}

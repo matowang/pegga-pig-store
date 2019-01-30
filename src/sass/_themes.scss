@@ -3,3 +3,20 @@
 .c1-background {
     background: $base-c1;
 }
+.peppa-background {
+    background: url('../images/peppa-pig-background.jpg') center/cover no-repeat;
+}
+
+.buy-button {
+    background: $base-c1-light;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    transition: color 300ms, background-color 300ms;
+    &:hover {
+        color: $base-c1-light;
+        background: $base-c1-dark;
+    }
+}
