@@ -12,7 +12,7 @@ class ProductCard extends React.Component {
     componentDidMount() {
         if (this.props.scrollToPosition) {
             const el = document.getElementById(`product-container-${this.props.id}-expanded`);
-            window.scrollTo(0, el.offsetTop - el.scrollHeight / 2);
+            window.scrollTo(0, el.offsetTop - window.innerHeight / 2);
         }
     }
     render() {

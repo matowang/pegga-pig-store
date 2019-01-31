@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'media-queries.scss';
+@import 'animations.scss';
 
 #products-grid {
     display: grid;
@@ -24,7 +25,7 @@
 }
 .product-card_container--expand {
     grid-column: 1/-1;
-    
+    animation: drop-down 300ms ease-in-out;
     .product-card {
         height: 350px;
         display: grid;
