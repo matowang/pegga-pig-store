@@ -2,8 +2,8 @@
 id: PE6596
 title: 22 Inch Talking George Plush
 price:
-    hkd: 329.9
-    twd: 1299
+    hkd: 330
+    twd: 1300
 dimensions:
     w: 28
     l: 21

@@ -2,8 +2,8 @@
 id: PE06952
 title: Shopping Trip Playset
 price:
-    hkd: 199.9
-    twd: 799
+    hkd: 200
+    twd: 800
 dimensions:
     w: 20
     l: 13

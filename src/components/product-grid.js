@@ -14,7 +14,7 @@ export default class ProductGrid extends React.Component {
     }
     render() {
         return (
-            <section id="products-grid">
+            <div id="products-grid">
                 {this.props.productsData.map(({ node }) => {
                     const { id, title, price, dimensions, imgs } = node.frontmatter;
                     const imageEdge = this.props.productsImgData.find(({ node }) => node.relativePath === imgs[0]);
@@ -24,28 +24,44 @@ export default class ProductGrid extends React.Component {
                     else
                         console.log(`Could not find image at ${imgs[0]}`)
                     return (
-                        <div className={
-                            `product-card_container 
-                            ${this.state.currentExpanded === id ? "product-card_container--expand" : ""}`
-                        }
-                            id={`product-container-${id}`}
-                            key={id}
-                        >
-                            <ProductCard
-                                id={id}
-                                title={title}
-                                price={price[this.props.currency]}
-                                currency={this.props.currency}
-                                imgUrl={imgUrl}
-                                width={dimensions.w}
-                                length={dimensions.l}
-                                height={dimensions.h}
-                                expandProduct={this.expandProduct}
-                            />
-                        </div>
+                        <React.Fragment key={id}>
+                            <div className="product-card_container"
+                                id={`product-container-${id}`}
+                            >
+                                <ProductCard
+                                    id={id}
+                                    title={title}
+                                    price={price[this.props.currency]}
+                                    currency={this.props.currency}
+                                    imgUrl={imgUrl}
+                                    width={dimensions.w}
+                                    length={dimensions.l}
+                                    height={dimensions.h}
+                                    expandProduct={this.expandProduct}
+                                />
+                            </div>
+                            {
+                                this.state.currentExpanded === id &&
+                                <div className="product-card_container product-card_container--expand"
+                                    id={`product-container-${id}`}
+                                >
+                                    <ProductCard
+                                        id={id}
+                                        title={title}
+                                        price={price[this.props.currency]}
+                                        currency={this.props.currency}
+                                        imgUrl={imgUrl}
+                                        width={dimensions.w}
+                                        length={dimensions.l}
+                                        height={dimensions.h}
+                                        expandProduct={this.expandProduct}
+                                    />
+                                </div>
+                            }
+                        </React.Fragment>
                     )
                 })}
-            </section>
+            </div>
         )
     }
 }

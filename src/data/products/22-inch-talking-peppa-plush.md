@@ -2,8 +2,8 @@
 id: PE06595
 title: 22 Inch Talking Peppa Plush
 price:
-    hkd: 329.9
-    twd: 1299
+    hkd: 330
+    twd: 1300
 dimensions:
     w: 30
     l: 23

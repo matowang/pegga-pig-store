@@ -2,7 +2,7 @@
 id: PE05934
 title: 9 Inch Red Dress Peppa Plush (No Sound)
 price:
-    hkd: 119.9
+    hkd: 120
     twd: 480
 dimensions:
     w: 10

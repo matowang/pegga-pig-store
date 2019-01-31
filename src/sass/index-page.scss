@@ -1,16 +1,36 @@
 @import 'products.scss';
+@import 'media-queries.scss';
 
 #index-page {
     padding: 2rem;
     background: #daf8ff;
     #landing {
+        position: relative;
+        font-size: 4rem;
+        @include tablet {
+            font-size: 3rem;
+        }
+        @include phone {
+            font-size: 2rem;
+        }
         img {
             border-radius: 3rem;
             border: solid 0.5rem white;
+        }
+        p {
+            color: rgb(255, 238, 0);
+            font-family: $bubblegum-sans;
+            position: absolute;
+            bottom: 0rem;
+            margin-left: 1em;
         }
     }
     h2 {
         color: $base-c2-dark;
         font-size: 3rem;
+    }
+    #product-section {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }

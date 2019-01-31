@@ -2,8 +2,8 @@
 id: PE6928
 title: Grandpa Pig Boat
 price:
-    hkd: 199.9
-    twd: 799
+    hkd: 200
+    twd: 800
 dimensions:
     w: 20
     l: 13

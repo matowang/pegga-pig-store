@@ -28,9 +28,12 @@ class IndexPage extends React.Component {
           <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year']} />
           <div id="landing">
             <img alt="Peppa Pig Family playing with mud" src={landingImg}></img>
+            <p>Chinese New Year Sale! <span className="sale-amount">10% OFF</span></p>
           </div>
-          <h2>Products</h2>
-          <ProductGrid productsData={this.props.data.allMarkdownRemark.edges} productsImgData={this.props.data.allFile.edges} currency={this.state.currency} />
+          <section id="product-section">
+            <h2>Products</h2>
+            <ProductGrid productsData={this.props.data.allMarkdownRemark.edges} productsImgData={this.props.data.allFile.edges} currency={this.state.currency} />
+          </section>
         </div>
       </Layout>
     )

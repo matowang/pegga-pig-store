@@ -2,8 +2,8 @@
 id: PE6722
 title: Moblie Medical Centre
 price:
-    hkd: 399.9
-    twd: 1599
+    hkd: 400
+    twd: 1600
 dimensions:
     w: 38
     l: 21

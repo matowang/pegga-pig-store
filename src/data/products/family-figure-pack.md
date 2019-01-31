@@ -2,8 +2,8 @@
 id: PE06666
 title: Family Figure Pack
 price:
-    hkd: 169.9
-    twd: 679
+    hkd: 170
+    twd: 680
 dimensions:
     w: 14
     l: 7

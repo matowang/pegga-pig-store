@@ -2,8 +2,8 @@
 id: PE06712
 title: Peppa Pig's Playground Playset
 price:
-    hkd: 199.9
-    twd: 799
+    hkd: 200
+    twd: 800
 dimensions:
     w: 29
     l: 18

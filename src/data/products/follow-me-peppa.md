@@ -2,8 +2,8 @@
 id: PE06664
 title: Follow Me Peppa
 price:
-    hkd: 199.9
-    twd: 799
+    hkd: 200
+    twd: 800
 dimensions:
     w: 16
     l: 12

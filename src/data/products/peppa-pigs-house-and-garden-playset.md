@@ -2,8 +2,8 @@
 id: PE06156
 title: Peppa Pig's House & Garden Playset
 price:
-    hkd: 329.9
-    twd: 1299
+    hkd: 330
+    twd: 1300
 dimensions:
     w: 22
     l: 7

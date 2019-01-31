@@ -2,8 +2,8 @@
 id: PE06227
 title: Air Peppa Jet
 price:
-    hkd: 319.9
-    twd: 1279
+    hkd: 320
+    twd: 1280
 dimensions:
     w: 29
     l: 17

@@ -2,8 +2,8 @@
 id: PE06350
 title: Advent Calendar
 price:
-    hkd: 299.9
-    twd: 1299
+    hkd: 300
+    twd: 1300
 dimensions:
     w: 40
     l: 6

@@ -2,8 +2,8 @@
 id: PE06711
 title: Peppa Pig's House Playset
 price:
-    hkd: 249.9
-    twd: 999
+    hkd: 250
+    twd: 1000
 dimensions:
     w: 26
     l: 8

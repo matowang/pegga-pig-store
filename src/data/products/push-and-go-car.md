@@ -2,8 +2,8 @@
 id: PE05130
 title: Push and Go Car
 price:
-    hkd: 299.9
-    twd: 1299
+    hkd: 300
+    twd: 1300
 dimensions:
     w: 24
     l: 16

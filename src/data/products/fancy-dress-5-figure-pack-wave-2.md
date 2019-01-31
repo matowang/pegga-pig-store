@@ -2,8 +2,8 @@
 id: PE06667
 title: Fancy Dress 5 figure pack (Wave 2)
 price:
-    hkd: 159.9
-    twd: 639
+    hkd: 160
+    twd: 640
 dimensions:
     w: 16
     l: 5

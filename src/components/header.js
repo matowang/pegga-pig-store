@@ -12,7 +12,7 @@ const Header = ({ siteTitle, setCurrency, currentCurrency }) => (
         {siteTitle}
       </Link>
     </h1>
-    <label id="currency-selector-label" for="currency-selector">Currency: </label>
+    <label id="currency-selector-label" htmlFor="currency-selector">Currency: </label>
     <select id="currency-selector" onChange={(e) => setCurrency(e.target.value)} value={currentCurrency}>
       <option value="hkd">HKD</option>
       <option value="twd">TWD</option>

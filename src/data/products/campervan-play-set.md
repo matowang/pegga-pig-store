@@ -2,8 +2,8 @@
 id: PE05332
 title: Campervan Play Set
 price:
-    hkd: 399.9
-    twd: 1599
+    hkd: 400
+    twd: 1600
 dimensions:
     w: 38
     l: 21

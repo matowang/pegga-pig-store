@@ -2,8 +2,8 @@
 id: PE06920
 title: Peppa's Secret Surprise
 price:
-    hkd: 99.9
-    twd: 399
+    hkd: 100
+    twd: 400
 dimensions:
     w: 8
     l: 8
