@@ -4,10 +4,13 @@
     padding: 2rem;
     background: #daf8ff;
     #landing {
-        margin: 2rem;
         img {
             border-radius: 3rem;
             border: solid 0.5rem white;
         }
+    }
+    h2 {
+        color: $base-c2-dark;
+        font-size: 3rem;
     }
 }

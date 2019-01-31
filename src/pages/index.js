@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import ProductCard from '../components/product-card'
+import ProductGrid from '../components/product-grid'
 
 import '../sass/index-page.scss';
 
@@ -17,47 +17,19 @@ class IndexPage extends React.Component {
     }
   }
   setCurrency = (currency) => {
-
     this.setState({ currency });
     window.Snipcart.setCurrency(currency);
   }
   render() {
     return (
-      <Layout>
+      <Layout setCurrency={this.setCurrency} currentCurrency={this.state.currency}>
         <div id="index-page" className="">
           <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year']} />
-          <p>Currency: {this.state.currency}</p>
-          <select onChange={e => this.setCurrency(e.target.value)}>
-            <option value="hkd">HKD</option>
-            <option value="twd">TWD</option>
-          </select>
           <div id="landing">
             <img alt="Peppa Pig Family playing with mud" src={landingImg}></img>
           </div>
-          <section id="products-grid">
-            {this.props.data.allMarkdownRemark.edges.map(({ node }) => {
-              const { id, title, price, dimensions, imgs } = node.frontmatter;
-              const imageEdge = this.props.data.allFile.edges.find(({ node }) => node.relativePath === imgs[0]);
-              let imgUrl = '';
-              if (imageEdge)
-                imgUrl = imageEdge.node.publicURL;
-              else
-                console.log(`Could not find image at ${imgs[0]}`)
-              return (
-                <ProductCard
-                  id={id}
-                  title={title}
-                  price={price[this.state.currency]}
-                  currency={this.state.currency}
-                  imgUrl={imgUrl}
-                  width={dimensions.w}
-                  length={dimensions.l}
-                  height={dimensions.h}
-                  key={id}
-                />
-              )
-            })}
-          </section>
+          <h2>Products</h2>
+          <ProductGrid productsData={this.props.data.allMarkdownRemark.edges} productsImgData={this.props.data.allFile.edges} currency={this.state.currency} />
         </div>
       </Layout>
     )
