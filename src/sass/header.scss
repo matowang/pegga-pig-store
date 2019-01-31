@@ -1,19 +1,33 @@
 @import 'variables.scss';
+@import 'media-queries.scss';
+
 #header {
     display: flex;
     flex-direction: row;
-    position: relative;
-    height: 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     align-items: center;
     background: $base-c1;
     color: white;
+    justify-content: space-between;
+    font-size: 1rem;
+    @include tablet {
+        font-size: 0.8rem;
+    }
+    @include phone {
+        font-size: 0.7rem;
+    }
+    
     #logo {
         margin: 0;
         height: 100%;
         object-fit: cover;
     }
     h1 {
-        margin: 0 5rem;
+        font-size: 2em;
+        margin-left: auto;
     }
     a {
         color: inherit;
@@ -21,10 +35,12 @@
     }
     #currency-selector-label {
         margin-right: 0.5em;
+        margin-left: auto;
     }
     #currency-selector {
         border-radius: 1em;
         outline: none;
         border: none;
+        margin-right: 1em;
     }
 }

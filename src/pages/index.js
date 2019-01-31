@@ -23,6 +23,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout setCurrency={this.setCurrency} currentCurrency={this.state.currency}>
+        <div className="nav-height" />
         <div id="index-page" className="">
           <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year']} />
           <div id="landing">
