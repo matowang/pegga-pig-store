@@ -23,7 +23,14 @@ class ProductCard extends React.Component {
                 salePrice[key] = price[key] - saleData.sale * price[key]
             }
         }
-        console.log(price);
+        let displayedCurrency;
+        switch (currency) {
+            case 'twd':
+                displayedCurrency = 'nt';
+                break;
+            default:
+                displayedCurrency = currency;
+        }
         return (
             <div className="product-card">
                 <img className="product-card_image" src={imgUrl} alt={title} onClick={() => this.props.expandProduct(id)} />
@@ -31,8 +38,8 @@ class ProductCard extends React.Component {
                     {title}</h3>
                 {displayDimensions && <div className="product-dimensions">{`Dimensions: ${width}×${length}×${height}cm`}</div>}
                 {stock && <div className="product-card_stock">Stock: {stock}</div>}
-                <div className="product-card_price product-card_price--crossed-out">{`${currency}${price[this.props.currency]}`}</div>
-                <div className="product-card_price product-card_price--current">{`${currency}${salePrice[this.props.currency]}`}</div>
+                <div className="product-card_price product-card_price--crossed-out">{`${displayedCurrency}${price[currency]}`}</div>
+                <div className="product-card_price product-card_price--current">{`${displayedCurrency}${salePrice[currency]}`}</div>
                 <button
                     className="snipcart-add-item buy-button product-card_buy-button"
                     onClick={() => console.log(`added item ${title}`)}
