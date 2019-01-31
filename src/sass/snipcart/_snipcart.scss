@@ -13,10 +13,10 @@
 \*------------------------------------*/
 
 // Global mixins, functions
-@import "tools/_mixins.scss";
+@import "./tools/_mixins.scss";
 
 // Global settings, mostly variables
-@import "settings/_fonts.scss";
+@import "./settings/_fonts.scss";
 @import "settings/_mediaQueries.scss";
 @import "settings/_colors.scss";
 
