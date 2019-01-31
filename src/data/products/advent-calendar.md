@@ -11,5 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/advent-calendar.png'
-
+stock: 2
 ---

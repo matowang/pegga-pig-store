@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/family-figure-pack.png'
+stock: 2
 ---

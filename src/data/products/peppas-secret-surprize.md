@@ -12,4 +12,5 @@ dimensions:
 imgs: 
     - 'images/products/peppas-secret-surprise1.png'
     - 'images/products/peppas-secret-surprise2.png'
+stock: 4
 ---

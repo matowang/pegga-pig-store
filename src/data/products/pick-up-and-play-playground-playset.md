@@ -11,5 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/pick-up-and-playground-playset1.png'
-
+stock: 5
 ---

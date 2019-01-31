@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/9-inch-peppa-pig-super-soft-collectables-peppa.png'
+stock: 2
 ---

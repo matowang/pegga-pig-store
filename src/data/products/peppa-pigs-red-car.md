@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/peppa-pigs-red-car.png'
+stock: 4
 ---

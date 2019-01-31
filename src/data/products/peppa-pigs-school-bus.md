@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/school-bus.png'
+stock: 1
 ---

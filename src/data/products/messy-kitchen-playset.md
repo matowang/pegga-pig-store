@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/messy-kitchen-playset.png'
+stock: 4
 ---

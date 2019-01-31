@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/peppa-pigs-campervan.png'
+stock: 3
 ---

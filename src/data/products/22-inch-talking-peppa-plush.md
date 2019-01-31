@@ -11,5 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/22-inch-talking-peppa-plush.png'
-
+stock: 1
 ---

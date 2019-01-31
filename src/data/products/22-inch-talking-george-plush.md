@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/22-inch-talking-george-plush.png'
+stock: 4
 ---

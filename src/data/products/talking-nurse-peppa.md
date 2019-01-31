@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/talking-nurse-peppa.png'
+stock: 1
 ---

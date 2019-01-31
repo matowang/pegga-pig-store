@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/mobile-medical-centre.png'
+stock: 4
 ---

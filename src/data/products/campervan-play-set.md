@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/campervan-play-set.png'
+stock: 4
 ---

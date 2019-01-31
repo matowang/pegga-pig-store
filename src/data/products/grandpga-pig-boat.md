@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/grandpa-pig-boat.png'
+stock: 3
 ---

@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/air-peppa-jet.png'
+stock: 3
 ---

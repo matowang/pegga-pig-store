@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/push-and-go-car.png'
+stock: 3
 ---

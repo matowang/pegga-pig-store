@@ -16,7 +16,7 @@ export default class ProductGrid extends React.Component {
         return (
             <div id="products-grid">
                 {this.props.productsData.map(({ node }) => {
-                    const { id, title, price, dimensions, imgs } = node.frontmatter;
+                    const { id, title, price, dimensions, imgs, stock } = node.frontmatter;
                     const imageEdge = this.props.productsImgData.find(({ node }) => node.relativePath === imgs[0]);
                     let imgUrl = '';
                     if (imageEdge)
@@ -54,6 +54,7 @@ export default class ProductGrid extends React.Component {
                                         width={dimensions.w}
                                         length={dimensions.l}
                                         height={dimensions.h}
+                                        stock={stock}
                                         expandProduct={this.expandProduct}
                                     />
                                 </div>

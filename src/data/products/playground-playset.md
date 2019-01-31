@@ -12,4 +12,5 @@ dimensions:
 imgs: 
     - 'images/products/playground-playset1.png'
     - 'images/products/playground-playset2.png'
+stock: 2
 ---

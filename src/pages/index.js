@@ -78,6 +78,7 @@ query {
             unit
           } 
           imgs
+          stock
         }
       } 
     }

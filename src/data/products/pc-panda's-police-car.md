@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/pc-pandas-police-car.png'
+stock: 3
 ---

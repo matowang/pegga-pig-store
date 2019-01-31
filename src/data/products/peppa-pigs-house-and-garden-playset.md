@@ -12,4 +12,5 @@ dimensions:
 imgs: 
     - 'images/products/house-and-garden-playset1.png'
     - 'images/products/house-and-garden-playset2.png'
+stock: 3
 ---

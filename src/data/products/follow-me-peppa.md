@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/follow-me-peppa.png'
+stock: 2
 ---

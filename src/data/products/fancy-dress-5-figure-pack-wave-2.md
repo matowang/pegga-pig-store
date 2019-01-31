@@ -11,4 +11,5 @@ dimensions:
     unit: cm
 imgs: 
     - 'images/products/fancy-dress-5-figure-pack-wave-2.png'
+stock: 2
 ---
