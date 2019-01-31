@@ -26,24 +26,34 @@
     grid-column: 1/-1;
     
     .product-card {
+        height: 350px;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(5, 1fr) 3fr;
+        grid-template-rows: repeat(5, 1fr) 5fr;
         grid-template-areas: 
         "image title"
+        "image dimensions"
         "image stock"
         "image price"
         "image price"
         "image buy-button"
         "image .";
-        grid-gap: 1em;
         justify-items: stretch;
+        align-items: flex-start;
         @include tablet {
             display: flex;
+            height: auto;
+            align-items: stretch;
+        }
+        .product-card_name {
+            margin: 0;
         }
         .product-card_image {
             grid-area: image;
             height: 100%;
+            margin: 0;
+        }
+        .product-card_buy-button {
             margin: 0;
         }
         .product-card_close-button {

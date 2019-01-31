@@ -9,7 +9,6 @@ export default class ProductGrid extends React.Component {
         }
     }
     expandProduct = (id) => {
-        console.log(typeof id);
         this.setState({ currentExpanded: id });
     }
     render() {
@@ -31,7 +30,7 @@ export default class ProductGrid extends React.Component {
                                 <ProductCard
                                     id={id}
                                     title={title}
-                                    price={price[this.props.currency]}
+                                    price={price}
                                     currency={this.props.currency}
                                     imgUrl={imgUrl}
                                     width={dimensions.w}
@@ -43,19 +42,21 @@ export default class ProductGrid extends React.Component {
                             {
                                 this.state.currentExpanded === id &&
                                 <div className="product-card_container product-card_container--expand"
-                                    id={`product-container-${id}`}
+                                    id={`product-container-${id}-expanded`}
                                 >
                                     <ProductCard
                                         id={id}
                                         title={title}
-                                        price={price[this.props.currency]}
+                                        price={price}
                                         currency={this.props.currency}
                                         imgUrl={imgUrl}
                                         width={dimensions.w}
                                         length={dimensions.l}
                                         height={dimensions.h}
+                                        displayDimensions={true}
                                         stock={stock}
                                         expandProduct={this.expandProduct}
+                                        scrollToPosition={true}
                                     />
                                 </div>
                             }
