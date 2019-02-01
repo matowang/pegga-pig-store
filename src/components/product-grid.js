@@ -47,6 +47,7 @@ export default class ProductGrid extends React.Component {
                                     <ProductCard
                                         id={id}
                                         title={title}
+                                        remarks={node.html}
                                         price={price}
                                         currency={this.props.currency}
                                         imgUrl={imgUrl}

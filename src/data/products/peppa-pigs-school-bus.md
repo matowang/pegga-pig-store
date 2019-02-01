@@ -13,3 +13,6 @@ imgs:
     - 'images/products/school-bus.png'
 stock: 1
 ---
+Push Peppa around her world in these fantastic free-wheeling vehicles. 
+School Bus with non removable Rebecca Rabbit.
+Scaled for play with other Little Character figures & playsets.

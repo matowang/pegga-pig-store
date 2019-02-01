@@ -13,3 +13,6 @@ imgs:
     - 'images/products/peppa-pigs-campervan.png'
 stock: 3
 ---
+Push Peppa around her world in these fantastic free-wheeling vehicles. 
+Campervan (with Peppa, folding table & benches) 
+Scaled for play with other Little Character figures & playsets.

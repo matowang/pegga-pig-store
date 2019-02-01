@@ -14,7 +14,7 @@ const Header = ({ siteTitle, setCurrency, currentCurrency }) => (
     </h1>
     <label id="currency-selector-label" htmlFor="currency-selector">Currency: </label>
     <select id="currency-selector" onChange={(e) => setCurrency(e.target.value)} value={currentCurrency}>
-      <option value="hkd">HKD - Hongkong</option>
+      {/* <option value="hkd">HKD - Hongkong</option> */}
       <option value="twd">TWD(NT) - Taiwan</option>
     </select>
   </header>

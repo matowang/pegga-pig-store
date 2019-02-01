@@ -13,3 +13,4 @@ imgs:
     - 'images/products/pick-up-and-playground-playset1.png'
 stock: 5
 ---
+Take these playsets with you and have imaginative, interactive fun on the go! Open up the playset, play with the figure and accessories, then listen to the sounds when you press the buttons. Removable sound box. Playground themes. 

@@ -27,18 +27,18 @@
     grid-column: 1/-1;
     animation: drop-down 300ms ease-in-out;
     .product-card {
-        height: 350px;
+        min-height: 350px;
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(5, 1fr) 5fr;
         grid-template-areas: 
         "image title"
+        "image description"
         "image dimensions"
         "image stock"
+        "image batteries"
         "image price"
         "image price"
-        "image buy-button"
-        "image .";
+        "image buy-button";
         justify-items: stretch;
         align-items: flex-start;
         @include tablet {

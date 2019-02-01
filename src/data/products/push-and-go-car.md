@@ -13,3 +13,4 @@ imgs:
     - 'images/products/push-and-go-car.png'
 stock: 3
 ---
+It's a beautiful day for a drive and what better way to spend it than with Peppa Pig and her family in their Push & Go Car. Simply push Daddy Pig down to make the car go. As the car drives you'll hear a little 'beep beep' before the Peppa Pig theme tune starts to play. Suitable for ages

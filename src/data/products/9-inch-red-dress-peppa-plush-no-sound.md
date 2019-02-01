@@ -13,3 +13,4 @@ imgs:
     - 'images/products/9-inch-peppa-pig-super-soft-collectables-peppa.png'
 stock: 2
 ---
+Cuddle up to this cute and cuddly Peppa soft toy.

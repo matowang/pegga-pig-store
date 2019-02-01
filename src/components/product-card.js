@@ -16,7 +16,7 @@ class ProductCard extends React.Component {
         }
     }
     render() {
-        const { id, title, price, currency, imgUrl, width, length, height, stock, displayDimensions } = this.props;
+        const { id, title, price, currency, imgUrl, width, length, height, stock, displayDimensions, remarks } = this.props;
         const salePrice = {};
         for (let key in price) {
             if (price.hasOwnProperty(key)) {
@@ -36,6 +36,7 @@ class ProductCard extends React.Component {
                 <img className="product-card_image" src={imgUrl} alt={title} onClick={() => this.props.expandProduct(id)} />
                 <h3 className="product-card_name" onClick={() => this.props.expandProduct(id)}>
                     {title}</h3>
+                {remarks && <div className="product-card_description" dangerouslySetInnerHTML={{ __html: remarks }} />}
                 {displayDimensions && <div className="product-dimensions">{`Dimensions: ${width}×${length}×${height}cm`}</div>}
                 {stock && <div className="product-card_stock">Stock: {stock}</div>}
                 <div className="product-card_price product-card_price--crossed-out">{`${displayedCurrency}${price[currency]}`}</div>
