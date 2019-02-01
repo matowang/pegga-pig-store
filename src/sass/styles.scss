@@ -3,7 +3,9 @@
 @import 'themes.scss';
 @import 'variables.scss';
 
-@import 'snipcart.scss';
+//@import './snipcart/snipcart';
+@import 'snipcart-customize.scss';
+
 body {
     font-family: $nunito;
 }
