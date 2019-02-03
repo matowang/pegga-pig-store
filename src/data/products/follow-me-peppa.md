@@ -12,6 +12,7 @@ dimensions:
 imgs: 
     - 'images/products/follow-me-peppa.png'
 stock: 2
+batteries: 2pcs X AAA (Included)
 ---
 You'll have loads of fun with this cute and interactive Peppa Pig toy, with lots of great sound effects, and 2 play modes!
  

@@ -12,5 +12,6 @@ dimensions:
 imgs: 
     - 'images/products/22-inch-talking-peppa-plush.png'
 stock: 1
+batteries: 3pcs X LR44. Try Me (Included non-replaceable)
 ---
 Giant Talking Peppa Pig Soft Toy. Cuddle up to this massive 22" (approx. 55cm) soft toy. Press Peppa's tummy to hear her talk! She's supersoft and cuddly! With classic Peppa Pig Styling. 

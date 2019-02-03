@@ -26,7 +26,7 @@ class IndexPage extends React.Component {
         <div className="nav-height" />
         <div id="index-page" className="">
           <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year', 'sale']} />
-          <iframe id="promotion-video" title="Peppa Pig Stop Motion | What's inside Peppa's Secret Surprise Box?" src="https://www.youtube.com/embed/VR5AViNTvno?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="promotion-video" title="Peppa Pig Stop Motion | What's inside Peppa's Secret Surprise Box?" src="https://www.youtube.com/embed/VR5AViNTvno?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <div id="landing">
             <img alt="Peppa Pig Family playing with mud" src={landingImg}></img>
             <p>Chinese New Year Sale! <span className="sale-amount">10% OFF</span></p>
@@ -80,6 +80,7 @@ query {
           } 
           imgs
           stock
+          batteries
         }
       } 
     }

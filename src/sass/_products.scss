@@ -39,12 +39,16 @@
         "image price"
         "image price"
         "image buy-button";
+        grid-gap: 0.5em;
         justify-items: stretch;
         align-items: flex-start;
         @include tablet {
             display: flex;
             height: auto;
             align-items: stretch;
+            div {
+                margin: 0.5em 0;
+            }
         }
         .product-card_name {
             margin: 0;
