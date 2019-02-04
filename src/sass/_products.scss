@@ -29,7 +29,7 @@
     .product-card {
         min-height: 350px;
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
         "image title"
         "image description"
@@ -38,10 +38,12 @@
         "image batteries"
         "image price"
         "image price"
-        "image buy-button";
+        "image buy-button"
+        "image .";
         grid-gap: 0.5em;
         justify-items: stretch;
         align-items: flex-start;
+        position: relative;
         @include tablet {
             display: flex;
             height: auto;
@@ -55,7 +57,12 @@
         }
         .product-card_image {
             grid-area: image;
-            height: 100%;
+            height: 100% !important;
+            max-height: 500px;
+            width: 100%;
+            img {
+                height: 100% !important;
+            }
             margin: 0;
         }
         .product-card_buy-button {
@@ -82,12 +89,14 @@
     padding: 1em;
     width: 100%;
     .product-card_image {
-        object-fit: contain;
         height: 200px;
         width: 100%;
         margin-bottom: auto;
-        cursor: pointer;
-        transition: height 200ms;
+        img {
+            object-fit: contain !important;
+            cursor: pointer;
+            transition: height 200ms;
+        }
     }
     h3 {
         color: black;

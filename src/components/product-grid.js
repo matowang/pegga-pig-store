@@ -19,7 +19,7 @@ export default class ProductGrid extends React.Component {
                     const imageEdge = this.props.productsImgData.find(({ node }) => node.relativePath === imgs[0]);
                     let imgUrl = '';
                     if (imageEdge)
-                        imgUrl = imageEdge.node.publicURL;
+                        imgUrl = imageEdge.node.childImageSharp.fluid;
                     else
                         console.log(`Could not find image at ${imgs[0]}`)
                     return (

@@ -10,7 +10,7 @@ dimensions:
     h: 13
     unit: cm
 imgs: 
-    - 'images/products/messy-kitchen-playset.png'
+    - 'messy-kitchen-playset.png'
 stock: 4
 ---
 Make up your own cooking stories or go shopping with Peppa! 

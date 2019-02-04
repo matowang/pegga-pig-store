@@ -10,7 +10,7 @@ dimensions:
     h: 36
     unit: cm
 imgs: 
-    - 'images/products/talking-nurse-peppa.png'
+    - 'talking-nurse-peppa.png'
 stock: 1
 batteries: 3pcs X LR44 (Included) - Plush, 3pcs X LR44 (Included) - Toy
 ---

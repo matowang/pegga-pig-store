@@ -10,7 +10,7 @@ dimensions:
     h: 14
     unit: cm
 imgs: 
-    - 'images/products/peppa-pigs-campervan.png'
+    - 'peppa-pigs-campervan.png'
 stock: 3
 ---
 Push Peppa around her world in these fantastic free-wheeling vehicles. 

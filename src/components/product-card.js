@@ -1,6 +1,7 @@
 import React from 'react';
 
 import saleData from '../data/sale-data.json';
+import Img from 'gatsby-image';
 
 class ProductCard extends React.Component {
     constructor(props) {
@@ -8,12 +9,15 @@ class ProductCard extends React.Component {
         this.state = {
             expanded: false
         }
+        this.imageRef = React.createRef();
     }
     componentDidMount() {
         if (this.props.scrollToPosition) {
             const el = document.getElementById(`product-container-${this.props.id}-expanded`);
             window.scrollTo(0, el.offsetTop - window.innerHeight / 2);
         }
+        console.log(this.imageRef);
+        //document.getElementById(`product-card_image-${this.props.id}`).addEventListener("click", this.imageRef.current.props.onClick)
     }
     render() {
         const { id, title, price, currency, imgUrl, width, length, height, stock, displayDimensions, remarks, batteries } = this.props;
@@ -33,14 +37,14 @@ class ProductCard extends React.Component {
         }
         return (
             <div className="product-card">
-                <img className="product-card_image" src={imgUrl} alt={title} onClick={() => this.props.expandProduct(id)} />
+                <Img ref={this.imageRef} id={`product-card_image-${id}`} className="product-card_image" fluid={imgUrl} alt={title} onClick={() => this.props.expandProduct(id)} />
                 <h3 className="product-card_name" onClick={() => this.props.expandProduct(id)}>
                     {title}</h3>
                 {remarks && <div className="product-card_description" dangerouslySetInnerHTML={{ __html: remarks }} />}
                 {displayDimensions && <div className="product-dimensions">{`Dimensions: ${width}×${length}×${height}cm`}</div>}
                 {stock && <div className="product-card_stock">Stock: {stock}</div>}
                 {batteries && <div className="product-card_batteries">Batteries: {batteries}</div>}
-                <div className="product-card_price product-card_price--crossed-out">{`${displayedCurrency}${price[currency]}`}</div>
+                {saleData.sale > 0 && <div className="product-card_price product-card_price--crossed-out">{`${displayedCurrency}${price[currency]}`}</div>}
                 <div className="product-card_price product-card_price--current">{`${displayedCurrency}${salePrice[currency]}`}</div>
                 <button
                     className="snipcart-add-item buy-button product-card_buy-button"
@@ -57,7 +61,7 @@ class ProductCard extends React.Component {
                     Buy
                 </button>
                 <button className="product-card_close-button" onClick={() => this.props.expandProduct("")}>×</button>
-                <span className="sale-amount">10% OFF</span>
+                {saleData.sale > 0 && <span className="sale-amount">{saleData.sale * 100}% OFF</span>}
             </div>
         )
     }

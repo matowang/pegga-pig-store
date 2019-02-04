@@ -29,7 +29,6 @@ class IndexPage extends React.Component {
           <iframe id="promotion-video" title="Peppa Pig Stop Motion | What's inside Peppa's Secret Surprise Box?" src="https://www.youtube.com/embed/VR5AViNTvno?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <div id="landing">
             <img alt="Peppa Pig Family playing with mud" src={landingImg}></img>
-            <p>Chinese New Year Sale! <span className="sale-amount">10% OFF</span></p>
           </div>
           <section id="product-section">
             <h2>Products</h2>
@@ -45,11 +44,16 @@ export default IndexPage
 
 export const query = graphql`
 query {
-  allFile(filter: { relativePath: { regex: "/images/products//" } extension: {regex: "/png|jpg/"}}) {
+  allFile(filter: { sourceInstanceName:{eq:"product-imgs"} extension: {regex: "/png|jpg/"}}) {
       edges {
         node {
           publicURL
           relativePath
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            } 
+          }
         } 
       }
   }

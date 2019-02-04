@@ -10,7 +10,7 @@ dimensions:
     h: 14
     unit: cm
 imgs: 
-    - 'images/products/grandpa-pig-boat.png'
+    - 'grandpa-pig-boat.png'
 stock: 3
 ---
 Push Peppa around her world in these fantastic free-wheeling boat. 

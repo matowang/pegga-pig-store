@@ -10,7 +10,7 @@ dimensions:
     h: 55
     unit: cm
 imgs: 
-    - 'images/products/22-inch-talking-peppa-plush.png'
+    - '22-inch-talking-peppa-plush.png'
 stock: 1
 batteries: 3pcs X LR44. Try Me (Included non-replaceable)
 ---

@@ -10,7 +10,7 @@ dimensions:
     h: 14
     unit: cm
 imgs: 
-    - 'images/products/school-bus.png'
+    - 'school-bus.png'
 stock: 1
 ---
 Push Peppa around her world in these fantastic free-wheeling vehicles. 

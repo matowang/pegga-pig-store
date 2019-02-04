@@ -10,7 +10,7 @@ dimensions:
     h: 27
     unit: cm
 imgs: 
-    - 'images/products/pick-up-and-playground-playset1.png'
+    - 'pick-up-and-playground-playset1.png'
 stock: 5
 batteries: 3pcs X LR44. Try Me (Included)
 ---

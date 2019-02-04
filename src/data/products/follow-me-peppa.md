@@ -10,7 +10,7 @@ dimensions:
     h: 19
     unit: cm
 imgs: 
-    - 'images/products/follow-me-peppa.png'
+    - 'follow-me-peppa.png'
 stock: 2
 batteries: 2pcs X AAA (Included)
 ---

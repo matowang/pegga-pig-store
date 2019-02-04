@@ -10,7 +10,7 @@ dimensions:
     h: 14
     unit: cm
 imgs: 
-    - 'images/products/peppa-pigs-red-car.png'
+    - 'peppa-pigs-red-car.png'
 stock: 4
 ---
 Push Peppa around her world in these fantastic free-wheeling vehicles. 

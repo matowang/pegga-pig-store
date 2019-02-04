@@ -10,7 +10,7 @@ dimensions:
     h: 13
     unit: cm
 imgs: 
-    - 'images/products/shopping-trip-playset1.png'
+    - 'shopping-trip-playset1.png'
 stock: 2
 ---
 Take Peppa to the shops with the Shopping Trip playset. Includes checkout, Miss Rabbit, Peppa Figure Trolley, Shopping bag and Food. 

@@ -10,7 +10,7 @@ dimensions:
     h: 15
     unit: cm
 imgs: 
-    - 'images/products/6-inch-peppa-pig-super-soft-collectables-george.png'
+    - '6-inch-peppa-pig-super-soft-collectables-george.png'
 stock: 3
 ---
 You can take this Supersoft George Pig in his classic outfit or Peppa Pig in her red dress everywhere with you! Cute & authentic Peppa Pig styling, with Supersoft fabric that you'll love to cuddle. Approx. 15cm tall.
