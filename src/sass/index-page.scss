@@ -25,6 +25,7 @@
         border: solid 0.5rem white;
         background: #fd6d6d;
         width: 100%;
+        box-sizing: border-box;
         @include tablet {
             font-size: 3rem;
         }

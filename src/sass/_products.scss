@@ -44,14 +44,6 @@
         justify-items: stretch;
         align-items: flex-start;
         position: relative;
-        @include tablet {
-            display: flex;
-            height: auto;
-            align-items: stretch;
-            div {
-                margin: 0.5em 0;
-            }
-        }
         .product-card_name {
             margin: 0;
         }
@@ -60,9 +52,6 @@
             height: 100% !important;
             max-height: 500px;
             width: 100%;
-            img {
-                height: 100% !important;
-            }
             margin: 0;
         }
         .product-card_buy-button {
@@ -77,6 +66,22 @@
             font-weight: bold;
             font-size: 2em;
             color: $base-c2-light;
+        }
+        @include tablet {
+            display: flex;
+            height: auto;
+            align-items: stretch;
+            justify-content: stretch;
+            & > div {
+                margin: 0.5em 0;
+            }
+            .product-card_image {
+                max-height: 100vw;
+                grid-area: unset;
+            }
+            .product-card_buy-button {
+                padding: 0.5em 0 1em 0;
+            }
         }
     }
 }
