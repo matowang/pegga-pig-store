@@ -19,6 +19,9 @@
     @include phone {
         font-size: 0.7rem;
     }
+    @include small-phone {
+        font-size: 0.6rem;
+    }
     
     #logo {
         margin: 0;

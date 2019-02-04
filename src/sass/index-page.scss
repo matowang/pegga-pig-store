@@ -4,6 +4,8 @@
 #index-page {
     padding: 2rem;
     background: #daf8ff;
+    box-sizing: border-box;
+    overflow-x: hidden;
     #promotion-video{
         width: 100%;
         height: 600px;
@@ -22,6 +24,7 @@
         border-radius: 3rem;
         border: solid 0.5rem white;
         background: #fd6d6d;
+        width: 100%;
         @include tablet {
             font-size: 3rem;
         }
