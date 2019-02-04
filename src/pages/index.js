@@ -29,7 +29,14 @@ class IndexPage extends React.Component {
           <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year', 'sale']} />
           <iframe id="promotion-video" title="Peppa Pig Stop Motion | What's inside Peppa's Secret Surprise Box?" src="https://www.youtube.com/embed/VR5AViNTvno?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <div id="landing">
-            <Img fluid={this.props.data.landingImage.childImageSharp.fluid} alt="Peppa Pig Family playing with mud" src={landingImg}></Img>
+            <div id="landing_title">
+              <span id="landing_title_ch">新年快樂。</span><br></br>
+              <span id="landing_title_en">Happy Chinese New Years!</span>
+            </div>
+            <div id="landing_img">
+              <Img fluid={this.props.data.landingImage.childImageSharp.fluid} alt="Peppa Pig Family playing with mud" src={landingImg}
+                imgStyle={{ "objectFit": "contain" }}></Img>
+            </div>
           </div>
           <section id="product-section">
             <h2>Products</h2>
@@ -51,6 +58,9 @@ query {
           publicURL
           relativePath
           childImageSharp {
+            original {
+              src
+            }
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid
             } 
@@ -58,11 +68,10 @@ query {
         } 
       }
   }
-  landingImage: file(relativePath: {eq :"family-play-mud.jpg"}) {
-    relativePath
+  landingImage: file(relativePath: {eq :"peppa-chinese-outfit.png"}) {
     childImageSharp {
-      fluid(quality: 100) {
-        ...GatsbyImageSharpFluid
+      fluid(quality: 100, maxWidth: 1600) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     } 
   }

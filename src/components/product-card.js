@@ -4,23 +4,14 @@ import saleData from '../data/sale-data.json';
 import Img from 'gatsby-image';
 
 class ProductCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            expanded: false
-        }
-        this.imageRef = React.createRef();
-    }
     componentDidMount() {
         if (this.props.scrollToPosition) {
             const el = document.getElementById(`product-container-${this.props.id}-expanded`);
             window.scrollTo(0, el.offsetTop - window.innerHeight / 2);
         }
-        //console.log(this.imageRef);
-        //document.getElementById(`product-card_image-${this.props.id}`).addEventListener("click", this.imageRef.current.props.onClick)
     }
     render() {
-        const { id, title, price, currency, imgUrl, width, length, height, stock, displayDimensions, remarks, batteries } = this.props;
+        const { id, title, price, currency, imgUrl, width, length, height, stock, displayDimensions, remarks, batteries, imgStatic } = this.props;
         const salePrice = {};
         for (let key in price) {
             if (price.hasOwnProperty(key)) {
@@ -37,7 +28,15 @@ class ProductCard extends React.Component {
         }
         return (
             <div className="product-card">
-                <Img ref={this.imageRef} id={`product-card_image-${id}`} className="product-card_image" fluid={imgUrl} alt={title} onClick={() => this.props.expandProduct(id)} />
+                <div className="product-card_image" onClick={() => this.props.expandProduct(id)}>
+                    <Img ref={this.imageRef} fluid={imgUrl} alt={title}
+                        style={{
+                            "height": "100%"
+                        }}
+                        imgStyle={{
+                            "objectFit": "contain"
+                        }} />
+                </div>
                 <h3 className="product-card_name" onClick={() => this.props.expandProduct(id)}>
                     {title}</h3>
                 {remarks && <div className="product-card_description" dangerouslySetInnerHTML={{ __html: remarks }} />}
@@ -53,7 +52,7 @@ class ProductCard extends React.Component {
                     data-item-name={title}
                     data-item-price={JSON.stringify(salePrice)}
                     data-item-url="https://angry-meitner-03adf1.netlify.com/"
-                    data-item-image={`https://angry-meitner-03adf1.netlify.com${imgUrl}`}
+                    data-item-image={`https://angry-meitner-03adf1.netlify.com${imgStatic}`}
                     data-item-width={width}
                     data-item-length={length}
                     data-item-height={height}

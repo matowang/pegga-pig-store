@@ -18,9 +18,11 @@ export default class ProductGrid extends React.Component {
                     const { id, title, price, dimensions, imgs, stock, batteries } = node.frontmatter;
                     const imageEdge = this.props.productsImgData.find(({ node }) => node.relativePath === imgs[0]);
                     let imgUrl = '';
-                    if (imageEdge)
+                    let imgStatic = '';
+                    if (imageEdge) {
                         imgUrl = imageEdge.node.childImageSharp.fluid;
-                    else
+                        imgUrl = imageEdge.node.childImageSharp.original.src;
+                    } else
                         console.log(`Could not find image at ${imgs[0]}`)
                     return (
                         <React.Fragment key={id}>
@@ -32,6 +34,7 @@ export default class ProductGrid extends React.Component {
                                     title={title}
                                     price={price}
                                     currency={this.props.currency}
+                                    imgStatic={imgStatic}
                                     imgUrl={imgUrl}
                                     width={dimensions.w}
                                     length={dimensions.l}
@@ -50,6 +53,7 @@ export default class ProductGrid extends React.Component {
                                         remarks={node.html}
                                         price={price}
                                         currency={this.props.currency}
+                                        imgStatic={imgStatic}
                                         imgUrl={imgUrl}
                                         width={dimensions.w}
                                         length={dimensions.l}
