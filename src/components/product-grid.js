@@ -21,7 +21,7 @@ export default class ProductGrid extends React.Component {
                     let imgStatic = '';
                     if (imageEdge) {
                         imgUrl = imageEdge.node.childImageSharp.fluid;
-                        imgUrl = imageEdge.node.childImageSharp.original.src;
+                        imgStatic = imageEdge.node.childImageSharp.original.src;
                     } else
                         console.log(`Could not find image at ${imgs[0]}`)
                     return (
