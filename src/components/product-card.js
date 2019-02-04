@@ -16,7 +16,7 @@ class ProductCard extends React.Component {
             const el = document.getElementById(`product-container-${this.props.id}-expanded`);
             window.scrollTo(0, el.offsetTop - window.innerHeight / 2);
         }
-        console.log(this.imageRef);
+        //console.log(this.imageRef);
         //document.getElementById(`product-card_image-${this.props.id}`).addEventListener("click", this.imageRef.current.props.onClick)
     }
     render() {
