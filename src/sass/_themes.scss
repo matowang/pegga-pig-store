@@ -15,9 +15,9 @@
     color: white;
     font-weight: bold;
     outline: none;
-    transition: color 300ms, background-color 300ms;
+    transition: color 200ms, background-color 200ms;
     &:hover {
-        color: $base-c1-light;
+        color: white;
         background: $base-c1-dark;
     }
 }

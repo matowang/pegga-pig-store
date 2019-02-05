@@ -61,7 +61,8 @@ export default class ProductGrid extends React.Component {
                                         displayDimensions={true}
                                         stock={stock}
                                         batteries={batteries}
-                                        expandProduct={this.expandProduct}
+                                        expandProduct={() => {}}
+                                        closeProduct={() => this.expandProduct("")}
                                         scrollToPosition={true}
                                     />
                                 </div>

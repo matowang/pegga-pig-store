@@ -27,8 +27,8 @@ class ProductCard extends React.Component {
                 displayedCurrency = currency;
         }
         return (
-            <div className="product-card">
-                <div className="product-card_image" onClick={() => this.props.expandProduct(id)}>
+            <div className="product-card" onClick={() => this.props.expandProduct(id)}>
+                <div className="product-card_image" >
                     <Img ref={this.imageRef} fluid={imgUrl} alt={title}
                         style={{
                             "height": "100%"
@@ -37,7 +37,7 @@ class ProductCard extends React.Component {
                             "objectFit": "contain"
                         }} />
                 </div>
-                <h3 className="product-card_name" onClick={() => this.props.expandProduct(id)}>
+                <h3 className="product-card_name" >
                     {title}</h3>
                 {remarks && <div className="product-card_description" dangerouslySetInnerHTML={{ __html: remarks }} />}
                 {displayDimensions && <div className="product-dimensions">{`Dimensions: ${width}×${length}×${height}cm`}</div>}
@@ -59,7 +59,7 @@ class ProductCard extends React.Component {
                 >
                     Buy
                 </button>
-                <button className="product-card_close-button" onClick={() => this.props.expandProduct("")}>×</button>
+                <button className="product-card_close-button" onClick={() => this.props.closeProduct()}>×</button>
                 {saleData.sale > 0 && <span className="sale-amount">{saleData.sale * 100}% OFF</span>}
             </div>
         )
