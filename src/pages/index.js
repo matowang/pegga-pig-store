@@ -26,7 +26,7 @@ class IndexPage extends React.Component {
       <Layout setCurrency={this.setCurrency} currentCurrency={this.state.currency}>
         <div className="nav-height" />
         <div id="index-page" className="">
-          <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year', 'sale']} />
+          <SEO title="Home" keywords={[`Peppa Pig`, `toy`, `gift`, 'new', 'chinese new year', 'sale']} image={this.props.data.landingImage.childImageSharp.original.src} />
           <iframe id="promotion-video" title="Peppa Pig Stop Motion | What's inside Peppa's Secret Surprise Box?" src="https://www.youtube.com/embed/VR5AViNTvno?rel=0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <div id="landing">
             <div id="landing_title">
@@ -70,6 +70,9 @@ query {
   }
   landingImage: file(relativePath: {eq :"peppa-chinese-outfit.png"}) {
     childImageSharp {
+      original {
+        src
+      }
       fluid(quality: 100, maxWidth: 1600) {
         ...GatsbyImageSharpFluid_tracedSVG
       }

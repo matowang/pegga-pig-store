@@ -3,6 +3,7 @@ module.exports = {
     title: `Peppa Pig Toy Store`,
     description: `Get your latest Pegga Pig Toys Here! Year of the pig. Chinese new year sale!`,
     author: `@Mato_wang`,
+    url: `https://angry-meitner-03adf1.netlify.com`
   },
   plugins: [
     `gatsby-transformer-json`,

@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+        const img = image || data.landingImage.childImageSharp.original.src;
         return (
           <Helmet
             htmlAttributes={{
@@ -31,6 +32,14 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: metaDescription,
               },
               {
+                property: `og:image`,
+                content: data.site.siteMetadata.url + img,
+              },
+              {
+                property: `og:url`,
+                content: data.site.siteMetadata.url,
+              },
+              {
                 property: `og:type`,
                 content: `website`,
               },
@@ -50,13 +59,17 @@ function SEO({ description, lang, meta, keywords, title }) {
                 name: `twitter:description`,
                 content: metaDescription,
               },
+              {
+                name: `twitter:image`,
+                content: data.site.siteMetadata.url + img,
+              },
             ]
               .concat(
                 keywords.length > 0
                   ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
                   : []
               )
               .concat(meta)}
@@ -90,6 +103,14 @@ const detailsQuery = graphql`
         title
         description
         author
+        url
+      }
+    }
+    landingImage: file(relativePath: {eq :"peppa-chinese-outfit.png"}) {
+      childImageSharp {
+        original {
+          src
+        }
       }
     }
   }
