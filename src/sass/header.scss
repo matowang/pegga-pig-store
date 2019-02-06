@@ -9,10 +9,11 @@
     z-index: 1;
     width: 100%;
     align-items: center;
-    background: $base-c1;
-    color: white;
+    background: white;
+    color: $base-c1;
     justify-content: space-between;
     font-size: 1rem;
+    box-shadow: 0 0 0.8em rgba($base-c1, .7);
     @include tablet {
         font-size: 0.8rem;
     }
@@ -24,8 +25,8 @@
     }
     
     #logo {
-        margin: 0;
-        height: 100%;
+        margin-left: 0.5em;
+        height: 80%;
         object-fit: cover;
     }
     h1 {
@@ -41,9 +42,15 @@
         margin-left: auto;
     }
     #currency-selector {
-        border-radius: 1em;
+        border-radius: 0.3em;
         outline: none;
         border: none;
         margin-right: 1em;
+        background: $base-c2-light;
+        color: white;
+        padding: 0.2em;
+        &:after {
+            background: $base-c1;
+        }
     }
 }
