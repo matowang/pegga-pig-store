@@ -12,4 +12,4 @@ Product data is queried using GraphQL to get the frontmatter from markdown files
 
 ![Peppa Pig in Chinese Outfit](https://i.imgur.com/ic1GezS.png)
 
-Drawn by https://www.instagram.com/sirrah_.liyu/
+Drawn by [Sarah Liu](https://www.instagram.com/sirrah_.liyu/)
