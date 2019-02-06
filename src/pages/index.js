@@ -21,6 +21,9 @@ class IndexPage extends React.Component {
     this.setState({ currency });
     window.Snipcart.setCurrency(currency);
   }
+  componentDidMount() {
+    window.Snipcart.setCurrency(this.state.currency);
+  }
   render() {
     return (
       <Layout setCurrency={this.setCurrency} currentCurrency={this.state.currency}>
@@ -31,7 +34,7 @@ class IndexPage extends React.Component {
           <div id="landing">
             <div id="landing_title">
               <span id="landing_title_ch">新年快樂。</span><br></br>
-              <span id="landing_title_en">Happy Chinese New Years!</span>
+              <span id="landing_title_en">Happy Chinese New Year!</span>
             </div>
             <div id="landing_img">
               <Img fluid={this.props.data.landingImage.childImageSharp.fluid} alt="Peppa Pig Family playing with mud" src={landingImg}
