@@ -22,6 +22,7 @@ class IndexPage extends React.Component {
     window.Snipcart.setCurrency(currency);
   }
   componentDidMount() {
+    console.log(`current currency: ${this.state.currency}`)
     window.Snipcart.setCurrency(this.state.currency);
   }
   render() {

@@ -1,8 +1,7 @@
-@keyframes drop-down {
-    0% {
-        transform: translate(0, -50%) scale(1, 0);
-    }
-    100% {
-        transform: translate(0, 0%) scale(1, 1);
-    }
+.drop-down {
+    animation: drop-down 300ms ease-in-out;
+}
+.close-up {
+    animation: close-up 200ms ease-in-out;
+    animation-fill-mode: forwards;
 }
